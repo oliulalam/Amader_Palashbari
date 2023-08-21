@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start"
+
+        >
+
+
+        <!-- Action Bar -->
+        <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+
+            <!-- Action Bar -->
+            <LinearLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal"
+                android:background="#1635E1"
+                >
+
+                <ImageView
+                    android:id="@+id/imageMenu"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/menu"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="আমাদের পলাশবাড়ী"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/bensenhandwriting"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:textColor="#FFFFFF"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:padding="3dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="6dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:text="January 21"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Action Bar End-->
+
+
+
+
+
+
+
+            <!-- Action Bar er por hote pura jayga ta -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:background="#F4F2F2"
+                android:layout_below="@+id/appBar"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:id="@+id/fast"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <!-- Backroung Image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="@drawable/backroung"
+                        >
+
+                    </LinearLayout>
+
+                    <!-- Backroung Image end-->
+
+
+
+                    <!-- Marqee text shuru-->
+
+                    <LinearLayout
+                        android:id="@+id/marq_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="নোটিশঃ"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="normal"
+                            android:background="#00BCD4"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="@font/bensenhandwriting"
+                            />
+
+                        <TextView
+                            android:id="@+id/marq"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="বঙ্গভংগের বিরুদ্ধে রবিন্দ্র এ গান লিখেছে।
+যেখানে সে তার কালীমাতার ব্যবচ্ছেদ মেনে নিতে না পারে উক্ত গান লিখেছে।
+সন্ধ্যা হলে দ্বিপ জ্বালানো, মায়ের পায়ে মাথা ঠোকানো হিন্দুদের কর্ম , মুসলমানের নয়।
+দেবিভক্তিমুলক এ গান আমাদের জাতিয় সঙ্গীত হিসেবে কিছুতেই মেনে নেওয়া যায়না"
+                            android:textSize="18dp"
+                            android:maxLines="1"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/ben"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <!-- Marqee text shuru End-->
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/marq_layout"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        >
+
+<!--                        <ProgressBar-->
+<!--                            android:id="@+id/progressBar"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"/>-->
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <!-- Action Bar pore hote pura ta ekhane sesh-->
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header"
+            android:layout_gravity="start"
+            />
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
